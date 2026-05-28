@@ -1145,16 +1145,21 @@
     <!-- ════════════════════════════════════════════
          CONTACT SECTION
     ════════════════════════════════════════════ -->
-    <section id="contact" aria-labelledby="contact-heading" class="py-24 px-5">
-      <div class="max-w-2xl mx-auto text-center reveal">
-        <p class="section-label mb-2">Ping.</p>
-        <h2 id="contact-heading" class="section-title mb-6 reveal reveal-delay-1">In Kontakt bleiben.</h2>
-        <p class="section-desc mb-10 mx-auto">
-          E-Mail für Ihr Feedback, Fragen zur Architektur von MindHug oder einfach ein kurzes "Hallo". Ich suche keine Aufträge oder Partnerschaften, aber ich lese immer Nachrichten von echten Menschen.
+            <section id="contact" aria-labelledby="contact-heading" class="py-24 px-5">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="section-label reveal">Ping.</p>
+        <h2 id="contact-heading" class="section-title mb-6 reveal reveal-delay-1">
+          In Kontakt bleiben.
+        </h2>
+        <p class="section-desc mx-auto mb-10 reveal reveal-delay-2">
+          E-Mail fГјr Ihr Feedback, Fragen zur Architektur von MindHug oder einfach ein kurzes "Hallo". Ich suche keine AuftrГ¤ge oder Partnerschaften, aber ich lese immer Nachrichten von echten Menschen.
         </p>
-        <a href="mailto:recode.architect@gmail.com" class="btn-primary inline-flex items-center gap-2" aria-label="E-Mail an den ReCode-Entwickler senden">
-          <i class="fa-solid fa-paper-plane text-sm"></i> E-Mail schreiben
-        </a>
+        <!-- Email вЂ” primary action -->
+        <div class="flex flex-wrap items-center gap-3 justify-center reveal reveal-delay-3">
+          <a href="mailto:recode.architect@gmail.com" class="btn-primary" id="contact-email-btn" aria-label="E-Mail an den ReCode-Entwickler senden">
+            <i class="fa-solid fa-envelope text-sm"></i> E-Mail schreiben
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1163,35 +1168,37 @@
   <!-- ════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
-    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <!-- Social links -->
-      <div class="flex items-center gap-5 text-xl" role="list" aria-label="Soziale Netzwerke">
-        <a href="https://www.youtube.com/@ReCode-Architect" target="_blank" rel="noopener noreferrer" class="social-btn youtube" role="listitem" aria-label="YouTube-Kanal">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://www.tiktok.com/@recode.architect" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" role="listitem" aria-label="TikTok-Profil">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
+          <footer id="footer" role="contentinfo">
+      <div class="max-w-6xl mx-auto px-5 py-12">
+        <!-- Social buttons + documents вЂ” centered -->
+        <div class="flex flex-col items-center gap-6">
+          <div class="flex items-center gap-3" role="list" aria-label="Soziale Netzwerke">
+            <a href="https://www.youtube.com/@ReCode-Architect" class="social-btn youtube" role="listitem" aria-label="YouTube-Kanal" title="YouTube" id="footer-youtube" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@recode.architect" class="social-btn tiktok" role="listitem" aria-label="TikTok-Profil" title="TikTok" id="footer-tiktok" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+          <div class="flex items-center gap-4 flex-wrap justify-center">
+            <button class="footer-link" id="open-privacy-btn" onclick="openModal('modal-privacy')" aria-haspopup="dialog" aria-controls="modal-privacy">
+              Datenschutzrichtlinie
+            </button>
+            <span style="color:var(--border);">В·</span>
+            <button class="footer-link" id="open-tos-btn" onclick="openModal('modal-tos')" aria-haspopup="dialog" aria-controls="modal-tos">
+              Nutzungsbedingungen
+            </button>
+          </div>
+        </div>
+        <div class="divider my-8"></div>
+        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; font-style:italic;">
+          Vibecoding ohne Kompromisse
+        </p>
+        <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); opacity:0.6;">
+          В© 2026 ReCode. Entwickelt aus Leidenschaft zur KreativitГ¤t.
+        </p>
       </div>
-
-      <!-- Center - Quote -->
-      <div class="footer-text font-medium text-center md:text-left">
-        Vibecoding ohne Kompromisse
-      </div>
-
-      <!-- Links -->
-      <div class="flex items-center gap-6 footer-text">
-        <button onclick="openModal('modal-privacy')" class="hover:text-white transition-colors">Datenschutzrichtlinie</button>
-        <button onclick="openModal('modal-tos')"     class="hover:text-white transition-colors">Nutzungsbedingungen</button>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="mt-8 text-center text-[0.75rem] text-[rgba(255,255,255,0.25)]">
-      © 2026 ReCode. Entwickelt aus Leidenschaft zur Kreativität.
-    </div>
-  </footer>
+    </footer>
 
   <!-- ════════════════════════════════════════════
        MODAL: PRIVACY POLICY

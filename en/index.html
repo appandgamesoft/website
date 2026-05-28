@@ -36,7 +36,7 @@
 
   <script>
     /* ──────────────────────────────────────────────
-       Tailwind: theme custom configuration
+       Tailwind: расширенная конфигурация темы
     ────────────────────────────────────────────── */
     tailwind.config = {
       darkMode: 'class',
@@ -111,7 +111,7 @@
 
   <style>
     /* ══════════════════════════════════════════════
-       BASE CSS VARIABLES AND GLOBAL STYLES
+       БАЗОВЫЕ CSS-ПЕРЕМЕННЫЕ И ГЛОБАЛЬНЫЕ СТИЛИ
     ══════════════════════════════════════════════ */
     :root {
       --violet:      #8b5cf6;
@@ -192,7 +192,7 @@
     }
 
     /* ══════════════════════════════════════════════
-       NAVIGATION — GLASSMORPHISM
+       НАВИГАЦИЯ — GLASSMORPHISM
     ══════════════════════════════════════════════ */
     #navbar {
       position: fixed;
@@ -239,7 +239,7 @@
     .nav-link:hover::after { transform: scaleX(1); }
 
     /* ══════════════════════════════════════════════
-       HERO SECTION
+       HERO СЕКЦИЯ
     ══════════════════════════════════════════════ */
     #hero {
       min-height: 100vh;
@@ -297,7 +297,7 @@
     }
     .hero-sub strong { color: #a78bfa; font-weight: 600; }
 
-    /* Typewriter cursor */
+    /* Typewriter курсор */
     #typewriter-cursor {
       display: inline-block;
       width: 2px;
@@ -309,7 +309,7 @@
     }
     @keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
 
-    /* CTA buttons */
+    /* Кнопки CTA */
     .btn-primary {
       display: inline-flex;
       align-items: center;
@@ -398,7 +398,7 @@
     }
 
     /* ══════════════════════════════════════════════
-       BENTO GRID — PROJECT CARDS
+       BENTO GRID — КАРТОЧКИ ПРОЕКТОВ
     ══════════════════════════════════════════════ */
     .bento-grid {
       display: grid;
@@ -407,7 +407,7 @@
       gap: 1.25rem;
     }
 
-    /* Main project card — spans 12 columns */
+    /* Основная карточка проекта — занимает 8 колонок */
     .bento-main  { grid-column: span 12; }
     .bento-side1 { grid-column: span 12; }
     .bento-side2 { grid-column: span 12; }
@@ -429,7 +429,7 @@
       cursor: default;
     }
     .bento-card::before {
-      /* Mouse follower glow */
+      /* Следящий свет */
       content: '';
       position: absolute;
       inset: 0;
@@ -488,7 +488,7 @@
       color: #fcd34d;
     }
 
-    /* Decorative card background circle */
+    /* Декоративный орнамент карточки */
     .card-deco {
       position: absolute;
       top: -30px; right: -30px;
@@ -498,7 +498,7 @@
       pointer-events: none;
     }
 
-    /* Application icon */
+    /* Иконка приложения */
     .app-icon {
       width: 72px; height: 72px;
       border-radius: 18px;
@@ -528,7 +528,7 @@
     }
 
     /* ══════════════════════════════════════════════
-       ABOUT SECTION
+       ABOUT СЕКЦИЯ
     ══════════════════════════════════════════════ */
     .about-pill {
       display: inline-flex;
@@ -581,7 +581,7 @@
     .footer-link:hover { color: #a78bfa; }
 
     /* ══════════════════════════════════════════════
-       MODALS — GLASSMORPHISM
+       МОДАЛЬНЫЕ ОКНА — GLASSMORPHISM
     ══════════════════════════════════════════════ */
     .modal-overlay {
       position: fixed;
@@ -702,7 +702,7 @@
     #mobile-menu a:hover { color: #fff; background: rgba(139,92,246,0.06); }
 
     /* ══════════════════════════════════════════════
-       UTILITIES
+       ВСПОМОГАТЕЛЬНЫЕ УТИЛИТЫ
     ══════════════════════════════════════════════ */
     .gradient-text {
       background: linear-gradient(135deg, #a78bfa 0%, #a3e635 100%);
@@ -716,13 +716,13 @@
     }
     section { position: relative; z-index: 1; }
 
-    /* Scrollbar global style */
+    /* Scrollbar глобальный */
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.35); border-radius: 4px; }
 
     /* ══════════════════════════════════════════════
-       LANGUAGE DROPDOWN
+       ВЫПАДАЮЩЕЕ МЕНЮ ЯЗЫКОВ
     ══════════════════════════════════════════════ */
     .lang-btn {
       display: inline-flex;

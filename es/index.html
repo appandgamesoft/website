@@ -1145,16 +1145,21 @@
     <!-- ════════════════════════════════════════════
          CONTACT SECTION
     ════════════════════════════════════════════ -->
-    <section id="contact" aria-labelledby="contact-heading" class="py-24 px-5">
-      <div class="max-w-2xl mx-auto text-center reveal">
-        <p class="section-label mb-2">Ping.</p>
-        <h2 id="contact-heading" class="section-title mb-6 reveal reveal-delay-1">En contacto.</h2>
-        <p class="section-desc mb-10 mx-auto">
+            <section id="contact" aria-labelledby="contact-heading" class="py-24 px-5">
+      <div class="max-w-2xl mx-auto text-center">
+        <p class="section-label reveal">Ping.</p>
+        <h2 id="contact-heading" class="section-title mb-6 reveal reveal-delay-1">
+          En contacto.
+        </h2>
+        <p class="section-desc mx-auto mb-10 reveal reveal-delay-2">
           Correo para tus comentarios, preguntas sobre la arquitectura de MindHug o simplemente un "hola". No busco encargos ni colaboraciones, pero siempre leo mensajes de personas reales.
         </p>
-        <a href="mailto:recode.architect@gmail.com" class="btn-primary inline-flex items-center gap-2" aria-label="Enviar email al desarrollador de ReCode">
-          <i class="fa-solid fa-paper-plane text-sm"></i> Enviar correo
-        </a>
+        <!-- Email вЂ” primary action -->
+        <div class="flex flex-wrap items-center gap-3 justify-center reveal reveal-delay-3">
+          <a href="mailto:recode.architect@gmail.com" class="btn-primary" id="contact-email-btn" aria-label="Enviar email al desarrollador de ReCode">
+            <i class="fa-solid fa-envelope text-sm"></i> Enviar correo
+          </a>
+        </div>
       </div>
     </section>
 
@@ -1163,40 +1168,42 @@
   <!-- ════════════════════════════════════════════
        FOOTER
   ════════════════════════════════════════════ -->
-  <footer id="footer" role="contentinfo">
-    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">
-      <!-- Social links -->
-      <div class="flex items-center gap-5 text-xl" role="list" aria-label="Redes sociales">
-        <a href="https://www.youtube.com/@ReCode-Architect" target="_blank" rel="noopener noreferrer" class="social-btn youtube" role="listitem" aria-label="Canal de YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-        <a href="https://www.tiktok.com/@recode.architect" target="_blank" rel="noopener noreferrer" class="social-btn tiktok" role="listitem" aria-label="Perfil de TikTok">
-          <i class="fa-brands fa-tiktok"></i>
-        </a>
+          <footer id="footer" role="contentinfo">
+      <div class="max-w-6xl mx-auto px-5 py-12">
+        <!-- Social buttons + documents вЂ” centered -->
+        <div class="flex flex-col items-center gap-6">
+          <div class="flex items-center gap-3" role="list" aria-label="Redes sociales">
+            <a href="https://www.youtube.com/@ReCode-Architect" class="social-btn youtube" role="listitem" aria-label="Canal de YouTube" title="YouTube" id="footer-youtube" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-youtube"></i>
+            </a>
+            <a href="https://www.tiktok.com/@recode.architect" class="social-btn tiktok" role="listitem" aria-label="Perfil de TikTok" title="TikTok" id="footer-tiktok" target="_blank" rel="noopener noreferrer">
+              <i class="fa-brands fa-tiktok"></i>
+            </a>
+          </div>
+          <div class="flex items-center gap-4 flex-wrap justify-center">
+            <button class="footer-link" id="open-privacy-btn" onclick="openModal('modal-privacy')" aria-haspopup="dialog" aria-controls="modal-privacy">
+              PolГ­tica de Privacidad
+            </button>
+            <span style="color:var(--border);">В·</span>
+            <button class="footer-link" id="open-tos-btn" onclick="openModal('modal-tos')" aria-haspopup="dialog" aria-controls="modal-tos">
+              TГ©rminos de Servicio
+            </button>
+          </div>
+        </div>
+        <div class="divider my-8"></div>
+        <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; font-style:italic;">
+          Vibecoding sin compromisos
+        </p>
+        <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); opacity:0.6;">
+          В© 2026 ReCode. Desarrollado por amor a la creatividad.
+        </p>
       </div>
-
-      <!-- Center - Quote -->
-      <div class="footer-text font-medium text-center md:text-left">
-        Vibecoding sin compromisos
-      </div>
-
-      <!-- Links -->
-      <div class="flex items-center gap-6 footer-text">
-        <button onclick="openModal('modal-privacy')" class="hover:text-white transition-colors">Política de Privacidad</button>
-        <button onclick="openModal('modal-tos')"     class="hover:text-white transition-colors">Términos de Servicio</button>
-      </div>
-    </div>
-
-    <!-- Copyright -->
-    <div class="mt-8 text-center text-[0.75rem] text-[rgba(255,255,255,0.25)]">
-      © 2026 ReCode. Desarrollado por amor a la creatividad.
-    </div>
-  </footer>
+    </footer>
 
   <!-- ════════════════════════════════════════════
        MODAL: PRIVACY POLICY
   ════════════════════════════════════════════ -->
-  <div
+    <div
     id="modal-privacy"
     class="modal-overlay"
     role="dialog"
@@ -1208,34 +1215,48 @@
       <div class="flex items-center justify-between mb-6">
         <h2 id="privacy-title" class="modal-h1">
           <i class="fa-solid fa-shield-halved mr-2" style="color:#a78bfa;"></i>
-          Política de Privacidad
+          PolГ­tica de Privacidad
         </h2>
         <button
           class="modal-close"
           onclick="closeModal('modal-privacy')"
-          aria-label="Cerrar política de privacidad"
+          aria-label="Cerrar polГ­tica de privacidad"
           id="close-privacy-btn"
         >
           <i class="fa-solid fa-xmark"></i>
         </button>
       </div>
-
     </div>
   </div>
 
   <!-- ════════════════════════════════════════════
        MODAL: TERMS OF SERVICE
   ════════════════════════════════════════════ -->
-  <div id="tos-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="tos-title">
-      <div class="modal-content" role="document">
-        <div class="modal-header">
-          <h2 class="modal-title" id="tos-title">Términos de Servicio</h2>
-          <button class="modal-close" onclick="closeModal('tos-modal')" aria-label="Cerrar términos de servicio">
-            <i class="fa-solid fa-xmark"></i>
-          </button>
-        </div>
+    <div
+    id="modal-tos"
+    class="modal-overlay"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="tos-title"
+    tabindex="-1"
+  >
+    <div class="modal-box">
+      <div class="flex items-center justify-between mb-6">
+        <h2 id="tos-title" class="modal-h1">
+          <i class="fa-solid fa-file-contract mr-2" style="color:#a78bfa;"></i>
+          TГ©rminos de Servicio
+        </h2>
+        <button
+          class="modal-close"
+          onclick="closeModal('modal-tos')"
+          aria-label="Cerrar tГ©rminos de servicio"
+          id="close-tos-btn"
+        >
+          <i class="fa-solid fa-xmark"></i>
+        </button>
       </div>
     </div>
+  </div>
 
   <!-- ════════════════════════════════════════════
        VANILLA JS
