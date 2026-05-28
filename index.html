@@ -745,9 +745,8 @@
 
         <!-- Desktop nav links -->
         <div class="hidden md:flex items-center gap-8">
-          <a href="#about"    class="nav-link" id="nav-about">О проекте</a>
-          <a href="#projects" class="nav-link" id="nav-projects">Проекты</a>
-          <a href="#contact"  class="nav-link" id="nav-contact">Контакт</a>
+          <a href="#about"   class="nav-link" id="nav-about">О проекте</a>
+          <a href="#contact" class="nav-link" id="nav-contact">Контакт</a>
         </div>
 
         <!-- CTA + Hamburger -->
@@ -985,7 +984,33 @@
             </div>
           </article>
 
+          <!-- SIDE CARD 1: Архитектура -->
+          <aside class="bento-card bento-side1 reveal reveal-delay-1" aria-label="Архитектурный подход">
+            <div class="card-deco" style="background: radial-gradient(circle, rgba(163,230,53,0.2) 0%, transparent 70%); top:-20px; right:-20px;"></div>
+            <div class="mb-4">
+              <div style="width:42px; height:42px; border-radius:12px; background:rgba(163,230,53,0.12); border:1px solid rgba(163,230,53,0.25); display:flex; align-items:center; justify-content:center;">
+                <i class="fa-solid fa-sitemap" style="color:#a3e635; font-size:1rem;"></i>
+              </div>
+            </div>
+            <h3 style="font-family:'Outfit',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:0.6rem;">Чистая архитектура</h3>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.7;">
+              Clean Architecture + MVI. Разделение слоёв, тестируемость, масштабируемость.
+            </p>
+          </aside>
 
+          <!-- SIDE CARD 2: Конфиденциальность -->
+          <aside class="bento-card bento-side2 reveal reveal-delay-2" aria-label="Конфиденциальность">
+            <div class="card-deco" style="background: radial-gradient(circle, rgba(251,113,133,0.2) 0%, transparent 70%); top:-20px; right:-20px;"></div>
+            <div class="mb-4">
+              <div style="width:42px; height:42px; border-radius:12px; background:rgba(251,113,133,0.1); border:1px solid rgba(251,113,133,0.25); display:flex; align-items:center; justify-content:center;">
+                <i class="fa-solid fa-shield-halved" style="color:#fda4af; font-size:1rem;"></i>
+              </div>
+            </div>
+            <h3 style="font-family:'Outfit',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-bottom:0.6rem;">Privacy by Design</h3>
+            <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.7;">
+              Нулевая аналитика. Все данные хранятся локально. Никаких серверов, никаких трекеров.
+            </p>
+          </aside>
 
         </div><!-- /bento-grid -->
 
