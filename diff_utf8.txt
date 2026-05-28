@@ -1,0 +1,439 @@
+﻿
+InputObject                                                                                                            
+-----------                                                                                                            
+<html lang="de" class="scroll-smooth">                                                                                 
+  <meta name="description" content="ReCode вЂ” unabhГ¤ngiger Entwickler mobiler Apps. Spezialisiert auf Vibecoding: ...
+  <meta name="keywords" content="ReCode, Vibecoding, mobile Anwendungen, KMP, Kotlin Multiplatform, Compose Multipla...
+  <meta property="og:title" content="ReCode вЂ” UnabhГ¤ngiger Mobilentwickler" />                                      
+  <meta property="og:description" content="Vibecoding: Erstellung und VerГ¶ffentlichung hochwertiger Anwendungen in ...
+  <meta property="og:locale" content="de_DE" />                                                                        
+  <title>ReCode вЂ” UnabhГ¤ngiger Mobilentwickler</title>                                                              
+       Tailwind: theme custom configuration                                                                            
+       BASE CSS VARIABLES AND GLOBAL STYLES                                                                            
+       NAVIGATION вЂ” GLASSMORPHISM                                                                                    
+       HERO SECTION                                                                                                    
+    /* Typewriter cursor */                                                                                            
+    /* CTA buttons */                                                                                                  
+       BENTO GRID вЂ” PROJECT CARDS                                                                                    
+    /* Main project card вЂ” spans 12 columns */                                                                       
+      /* Mouse follower glow */                                                                                        
+    /* Decorative card background circle */                                                                            
+    /* Application icon */                                                                                             
+       ABOUT SECTION                                                                                                   
+       MODALS вЂ” GLASSMORPHISM                                                                                        
+       UTILITIES                                                                                                       
+    /* Scrollbar global style */                                                                                       
+       LANGUAGE DROPDOWN                                                                                               
+       NAVIGATION                                                                                                      
+    <nav aria-label="Hauptnavigation">                                                                                 
+        <!-- Logo -->                                                                                                  
+        <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode вЂ” Startseite">ReCode</a>           
+          <a href="#about"    class="nav-link" id="nav-about">Manifest</a>                                             
+          <a href="#projects" class="nav-link" id="nav-projects">Projekte</a>                                          
+          <a href="#contact"  class="nav-link" id="nav-contact">Kontakt</a>                                            
+            <button class="lang-btn" id="lang-menu-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Sp...
+              рџ‡©рџ‡Є DE <i class="fa-solid fa-chevron-down lang-chevron"></i>                                        
+            <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Sprachauswahl">                   
+              <a href="../en/index.html" onclick="localStorage.setItem('pref-lang','en')" role="option"><span class=...
+              <a href="../index.html"    onclick="localStorage.setItem('pref-lang','ru')" role="option"><span class=...
+              <a href="#"           onclick="localStorage.setItem('pref-lang','de')" class="active" role="option"><s...
+              <a href="../es/"           onclick="localStorage.setItem('pref-lang','es')" role="option"><span class=...
+              <a href="../fr/"           onclick="localStorage.setItem('pref-lang','fr')" role="option"><span class=...
+              <a href="../hi/"           onclick="localStorage.setItem('pref-lang','hi')" role="option"><span class=...
+              <a href="../ja/"           onclick="localStorage.setItem('pref-lang','ja')" role="option"><span class=...
+              <a href="../ko/"           onclick="localStorage.setItem('pref-lang','ko')" role="option"><span class=...
+              <a href="../pt/"           onclick="localStorage.setItem('pref-lang','pt')" role="option"><span class=...
+              <a href="../zh/"           onclick="localStorage.setItem('pref-lang','zh')" role="option"><span class=...
+            aria-label="MenГј Г¶ffnen"                                                                                 
+      <div id="mobile-menu" role="navigation" aria-label="Mobiles MenГј">                                              
+        <a href="#about"    onclick="closeMobileMenu()">Manifest</a>                                                   
+        <a href="#projects" onclick="closeMobileMenu()">Projekte</a>                                                   
+        <a href="#contact"  onclick="closeMobileMenu()">Kontakt</a>                                                    
+        <nav class="mobile-lang-grid" aria-label="Sprachauswahl">                                                      
+          <a href="../en/index.html" onclick="localStorage.setItem('pref-lang','en')"><span>рџ‡¬рџ‡§</span> English</a>
+          <a href="../index.html"    onclick="localStorage.setItem('pref-lang','ru')"><span>рџ‡·рџ‡є</span> Р СѓСЃСЃ...
+          <a href="#"           onclick="localStorage.setItem('pref-lang','de')" class="active"><span>рџ‡©рџ‡Є</span...
+          <a href="../es/"           onclick="localStorage.setItem('pref-lang','es')"><span>рџ‡Єрџ‡ё</span> EspaГ±ol...
+          <a href="../fr/"           onclick="localStorage.setItem('pref-lang','fr')"><span>рџ‡«рџ‡·</span> FranГ§ai...
+          <a href="../hi/"           onclick="localStorage.setItem('pref-lang','hi')"><span>рџ‡®рџ‡і</span> а¤№а¤їа¤...
+          <a href="../ja/"           onclick="localStorage.setItem('pref-lang','ja')"><span>рџ‡Їрџ‡µ</span> ж—Ґжњ¬иЄ...
+          <a href="../ko/"           onclick="localStorage.setItem('pref-lang','ko')"><span>рџ‡°рџ‡·</span> н•њкµ­м–...
+          <a href="../pt/"           onclick="localStorage.setItem('pref-lang','pt')"><span>рџ‡§рџ‡·</span> PortuguГ...
+          <a href="../zh/"           onclick="localStorage.setItem('pref-lang','zh')"><span>рџ‡Ёрџ‡і</span> з®ЂдЅ“дё...
+       HERO SECTION                                                                                                    
+        <!-- Status Badge -->                                                                                          
+          Gerade am Erschaffen                                                                                         
+        <!-- Main Title -->                                                                                            
+          Vibecoding<br />grenzenlos                                                                                   
+        <!-- Typewriter Subtitle -->                                                                                   
+          <strong>ReCode</strong> вЂ” unabhГ¤ngiger Entwickler.<br />                                                  
+          Spezialisiert auf die Erstellung und VerГ¶ffentlichung von                                                   
+        <!-- CTA Buttons -->                                                                                           
+            <i class="fa-solid fa-layer-group text-sm"></i> MindHug entdecken                                          
+            <i class="fa-solid fa-fire text-sm"></i> Mein Vibe                                                         
+        <!-- Tech stack tags -->                                                                                       
+        <div class="flex flex-wrap gap-2 justify-center mt-10 reveal reveal-delay-4" aria-label="Verwendete Technolo...
+         PHILOSOPHY / ABOUT                                                                                            
+          <!-- Text block -->                                                                                          
+            <p class="section-label reveal">Philosophie</p>                                                            
+              Code ist&nbsp;<span class="gradient-text">Kunst</span>                                                   
+              Vibecoding ist nicht nur Entwicklung. Es ist ein Flow-Zustand, in dem technische Entscheidungen intuit...
+              Die VerГ¶ffentlichung von Produkten auf globalen Plattformen ist meine Art, meine Vision zu teilen und...
+            <!-- Feature Pills -->                                                                                     
+                100% anonym                                                                                            
+                Keine Datenerfassung                                                                                   
+                Autonomer Betrieb                                                                                      
+          <!-- Decorative Bento Card -->                                                                               
+                <!-- Mini Stats -->                                                                                    
+                    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem; font-weight:500;">Proj...
+                    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem; font-weight:500;">Krea...
+                <!-- Principles -->                                                                                    
+                    Saubere Multiplattform-Architektur                                                                 
+                    Kotlin Multiplatform als Basis                                                                     
+                    Natives UX Гјber Compose Multiplatform                                                             
+                    VollstГ¤ndige LokalitГ¤t вЂ” Ihre Daten verlassen nie Ihr GerГ¤t                                   
+         PROJECTS вЂ” BENTO GRID                                                                                       
+          <p class="section-label reveal">Portfolio</p>                                                                
+            Projekte                                                                                                   
+            Meine Projekte sind eine Balance zwischen zuverlГ¤ssiger Architektur und reibungsloser Interaktion. Aktu...
+          <!-- в… MAIN CARD: MindHug -->                                                                              
+          <article class="bento-card bento-main reveal" aria-label="Projekt MindHug">                                  
+            <!-- Card Header -->                                                                                       
+              <div class="app-icon" role="img" aria-label="MindHug App-Symbol">рџ§ </div>                              
+                    <i class="fa-solid fa-star" style="font-size:0.6rem;"></i>&nbsp;Flaggschiff                        
+                  Umfassende plattformГјbergreifende LГ¶sung auf KMP                                                   
+            <!-- Description -->                                                                                       
+              MindHug ist eine App zur UnterstГјtzung der mentalen Gesundheit, von Grund auf mit reinem Kotlin Multi...
+            <!-- Tech Stack -->                                                                                        
+                Technologie-Stack                                                                                      
+              <div class="flex flex-wrap gap-2" role="list" aria-label="MindHug Technologien">                         
+            <!-- Platform Tags -->                                                                                     
+          <!-- SIDE CARD 1: Architecture -->                                                                           
+          <aside class="bento-card bento-side1 reveal reveal-delay-1" aria-label="Architekturansatz">                  
+            <h3 style="font-family:'Outfit',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-botto...
+              Clean Architecture + MVI. Schichttrennung, Testbarkeit, Skalierbarkeit.                                  
+          <!-- SIDE CARD 2: Privacy -->                                                                                
+          <aside class="bento-card bento-side2 reveal reveal-delay-2" aria-label="Datenschutzphilosophie">             
+              Keine Analysen. Alle Daten werden lokal gespeichert. Keine Server, keine Tracker.                        
+         CONTACT SECTION                                                                                               
+      <div class="max-w-2xl mx-auto text-center reveal">                                                               
+        <p class="section-label mb-2">Ping.</p>                                                                        
+        <h2 id="contact-heading" class="section-title mb-6">In Kontakt bleiben.</h2>                                   
+        <p class="section-desc mb-10 mx-auto">                                                                         
+          E-Mail fГјr Ihr Feedback, Fragen zur Architektur von MindHug oder einfach ein kurzes "Hallo". Ich suche ke...
+        <a href="mailto:recode.architect@gmail.com" class="btn-primary inline-flex items-center gap-2" aria-label="E...
+          <i class="fa-solid fa-paper-plane text-sm"></i> E-Mail schreiben                                             
+        </a>                                                                                                           
+    <div class="max-w-6xl mx-auto px-5 flex flex-col md:flex-row justify-between items-center gap-6">                  
+      <!-- Social links -->                                                                                            
+      <div class="flex items-center gap-5 text-xl" role="list" aria-label="Soziale Netzwerke">                         
+        <a href="https://www.youtube.com/@ReCode-Architect" target="_blank" rel="noopener noreferrer" class="social-...
+          <i class="fa-brands fa-youtube"></i>                                                                         
+        </a>                                                                                                           
+        <a href="https://www.tiktok.com/@recode.architect" target="_blank" rel="noopener noreferrer" class="social-l...
+          <i class="fa-brands fa-tiktok"></i>                                                                          
+        </a>                                                                                                           
+      <!-- Center - Quote -->                                                                                          
+      <div class="footer-text font-medium text-center md:text-left">                                                   
+        Vibecoding ohne Kompromisse                                                                                    
+      <!-- Links -->                                                                                                   
+      <div class="flex items-center gap-6 footer-text">                                                                
+        <button onclick="openModal('privacy-modal')" class="hover:text-white transition-colors">Datenschutzrichtlini...
+        <button onclick="openModal('tos-modal')"     class="hover:text-white transition-colors">Nutzungsbedingungen<...
+    <!-- Copyright -->                                                                                                 
+    <div class="mt-8 text-center text-[0.75rem] text-[rgba(255,255,255,0.25)]">                                        
+      В© 2026 ReCode. Entwickelt aus Leidenschaft zur KreativitГ¤t.                                                    
+       MODAL: PRIVACY POLICY                                                                                           
+  <div id="privacy-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="privacy-title">       
+      <div class="modal-content" role="document">                                                                      
+        <div class="modal-header">                                                                                     
+          <h2 class="modal-title" id="privacy-title">Datenschutzrichtlinie</h2>                                        
+          <button class="modal-close" onclick="closeModal('privacy-modal')" aria-label="Datenschutzrichtlinie schlie...
+            <i class="fa-solid fa-xmark"></i>                                                                          
+        <div class="modal-body text-[0.95rem] leading-relaxed text-[var(--text-muted)] space-y-4">                     
+          <!-- Text for Privacy Policy -->                                                                             
+      </div>                                                                                                           
+       MODAL: TERMS OF SERVICE                                                                                         
+    <!-- TOS Modal -->                                                                                                 
+    <div id="tos-modal" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="tos-title">             
+      <div class="modal-content" role="document">                                                                      
+        <div class="modal-header">                                                                                     
+          <h2 class="modal-title" id="tos-title">Nutzungsbedingungen</h2>                                              
+          <button class="modal-close" onclick="closeModal('tos-modal')" aria-label="Nutzungsbedingungen schlieГџen">   
+            <i class="fa-solid fa-xmark"></i>                                                                          
+        <div class="modal-body text-[0.95rem] leading-relaxed text-[var(--text-muted)] space-y-4">                     
+          <!-- Text for Terms of Service -->                                                                           
+        </div>                                                                                                         
+      </div>                                                                                                           
+    </div>                                                                                                             
+       1. DARK THEME вЂ” forced                                                                                        
+       2. TYPEWRITER EFFECT                                                                                            
+        "Produkten fГјr globale mobile MarktplГ¤tze.",                                                                 
+        "ArchitekturlГ¶sungen auf KMP.",                                                                               
+        "nativen mobilen Erlebnissen."                                                                                 
+       4. GLOW EFFECT (Bento cards mouse tracking)                                                                     
+       7. MODALS                                                                                                       
+      // Focus for accessibility                                                                                       
+    // Close on background click                                                                                       
+    // Close on Escape key                                                                                             
+       8. SMOOTH SCROLL fallback                                                                                       
+<html lang="ru" class="scroll-smooth">                                                                                 
+    (function() {                                                                                                      
+      const userLang = navigator.language || navigator.userLanguage;                                                   
+      const isRussian = userLang.toLowerCase().startsWith('ru');                                                       
+      const manualOverride = localStorage.getItem('pref-lang');                                                        
+      if (!isRussian && manualOverride !== 'ru') {                                                                     
+        window.location.href = './en/index.html';                                                                      
+  <meta name="description" content="ReCode вЂ” РЅРµР·Р°РІРёСЃРёРјС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє РјРѕР±РёР»СЊРЅС‹С… РїСЂ...
+  <meta name="keywords" content="ReCode, РІР°Р№Р±РєРѕРґРёРЅРі, РјРѕР±РёР»СЊРЅС‹Рµ РїСЂРёР»РѕР¶РµРЅРёСЏ, KMP, Kotlin ...
+  <meta property="og:title" content="ReCode вЂ” РќРµР·Р°РІРёСЃРёРјС‹Р№ РјРѕР±РёР»СЊРЅС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє" />   
+  <meta property="og:description" content="Р’Р°Р№Р±РєРѕРґРёРЅРі: СЃРѕР·РґР°РЅРёРµ Рё РїСѓР±Р»РёРєР°С†РёСЏ РІС‹СЃРѕРє...
+  <meta property="og:locale" content="ru_RU" />                                                                        
+  <title>ReCode вЂ” РќРµР·Р°РІРёСЃРёРјС‹Р№ РјРѕР±РёР»СЊРЅС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє</title>                           
+       Tailwind: СЂР°СЃС€РёСЂРµРЅРЅР°СЏ РєРѕРЅС„РёРіСѓСЂР°С†РёСЏ С‚РµРјС‹                                              
+       Р‘РђР—РћР’Р«Р• CSS-РџР•Р Р•РњР•РќРќР«Р• Р Р“Р›РћР‘РђР›Р¬РќР«Р• РЎРўРР›Р                                      
+       РќРђР’РР“РђР¦РРЇ вЂ” GLASSMORPHISM                                                                            
+       HERO РЎР•РљР¦РРЇ                                                                                               
+    /* Typewriter РєСѓСЂСЃРѕСЂ */                                                                                      
+    /* РљРЅРѕРїРєРё CTA */                                                                                             
+       BENTO GRID вЂ” РљРђР РўРћР§РљР РџР РћР•РљРўРћР’                                                                
+    /* РћСЃРЅРѕРІРЅР°СЏ РєР°СЂС‚РѕС‡РєР° РїСЂРѕРµРєС‚Р° вЂ” Р·Р°РЅРёРјР°РµС‚ 8 РєРѕР»РѕРЅРѕРє */                       
+      /* РЎР»РµРґСЏС‰РёР№ СЃРІРµС‚ */                                                                                  
+    /* Р”РµРєРѕСЂР°С‚РёРІРЅС‹Р№ РѕСЂРЅР°РјРµРЅС‚ РєР°СЂС‚РѕС‡РєРё */                                                   
+    /* РРєРѕРЅРєР° РїСЂРёР»РѕР¶РµРЅРёСЏ */                                                                            
+       ABOUT РЎР•РљР¦РРЇ                                                                                              
+       РњРћР”РђР›Р¬РќР«Р• РћРљРќРђ вЂ” GLASSMORPHISM                                                                   
+       Р’РЎРџРћРњРћР“РђРўР•Р›Р¬РќР«Р• РЈРўРР›РРўР«                                                                   
+    /* Scrollbar РіР»РѕР±Р°Р»СЊРЅС‹Р№ */                                                                               
+       Р’Р«РџРђР”РђР®Р©Р•Р• РњР•РќР® РЇР—Р«РљРћР’                                                                      
+       РќРђР’РР“РђР¦РРЇ                                                                                              
+    <nav aria-label="РћСЃРЅРѕРІРЅР°СЏ РЅР°РІРёРіР°С†РёСЏ">                                                             
+        <!-- Р›РѕРіРѕС‚РёРї -->                                                                                        
+        <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode вЂ” РЅР° РіР»Р°РІРЅСѓСЋ">ReCode</a>  
+          <a href="#about"    class="nav-link" id="nav-about">РњР°РЅРёС„РµСЃС‚</a>                                     
+          <a href="#projects" class="nav-link" id="nav-projects">РџСЂРѕРµРєС‚С‹</a>                                    
+          <a href="#contact"  class="nav-link" id="nav-contact">РЎРІСЏР·СЊ</a>                                         
+            <button class="lang-btn" id="lang-menu-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Р’...
+              рџ‡·рџ‡є RU <i class="fa-solid fa-chevron-down lang-chevron"></i>                                        
+            <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Р’С‹Р±РѕСЂ СЏР·С‹РєР°">           
+              <a href="./en/index.html" onclick="localStorage.setItem('pref-lang','en')" role="option"><span class="...
+              <a href="./"              onclick="localStorage.setItem('pref-lang','ru')" class="active" role="option...
+              <a href="./de/"           onclick="localStorage.setItem('pref-lang','de')" role="option"><span class="...
+              <a href="./es/"           onclick="localStorage.setItem('pref-lang','es')" role="option"><span class="...
+              <a href="./fr/"           onclick="localStorage.setItem('pref-lang','fr')" role="option"><span class="...
+              <a href="./hi/"           onclick="localStorage.setItem('pref-lang','hi')" role="option"><span class="...
+              <a href="./ja/"           onclick="localStorage.setItem('pref-lang','ja')" role="option"><span class="...
+              <a href="./ko/"           onclick="localStorage.setItem('pref-lang','ko')" role="option"><span class="...
+              <a href="./pt/"           onclick="localStorage.setItem('pref-lang','pt')" role="option"><span class="...
+              <a href="./zh/"           onclick="localStorage.setItem('pref-lang','zh')" role="option"><span class="...
+            aria-label="РћС‚РєСЂС‹С‚СЊ РјРµРЅСЋ"                                                                       
+      <div id="mobile-menu" role="navigation" aria-label="РњРѕР±РёР»СЊРЅРѕРµ РјРµРЅСЋ">                                
+        <a href="#about"    onclick="closeMobileMenu()">РњР°РЅРёС„РµСЃС‚</a>                                           
+        <a href="#projects" onclick="closeMobileMenu()">РџСЂРѕРµРєС‚С‹</a>                                             
+        <a href="#contact"  onclick="closeMobileMenu()">РЎРІСЏР·СЊ</a>                                                 
+        <nav class="mobile-lang-grid" aria-label="Р’С‹Р±РѕСЂ СЏР·С‹РєР°">                                              
+          <a href="./en/index.html" onclick="localStorage.setItem('pref-lang','en')"><span>рџ‡¬рџ‡§</span> English</a> 
+          <a href="./"              onclick="localStorage.setItem('pref-lang','ru')" class="active"><span>рџ‡·рџ‡є</...
+          <a href="./de/"           onclick="localStorage.setItem('pref-lang','de')"><span>рџ‡©рџ‡Є</span> Deutsch</a> 
+          <a href="./es/"           onclick="localStorage.setItem('pref-lang','es')"><span>рџ‡Єрџ‡ё</span> EspaГ±ol</a>
+          <a href="./fr/"           onclick="localStorage.setItem('pref-lang','fr')"><span>рџ‡«рџ‡·</span> FranГ§ais...
+          <a href="./hi/"           onclick="localStorage.setItem('pref-lang','hi')"><span>рџ‡®рџ‡і</span> а¤№а¤їа¤Ё...
+          <a href="./ja/"           onclick="localStorage.setItem('pref-lang','ja')"><span>рџ‡Їрџ‡µ</span> ж—Ґжњ¬иЄћ...
+          <a href="./ko/"           onclick="localStorage.setItem('pref-lang','ko')"><span>рџ‡°рџ‡·</span> н•њкµ­м–ґ...
+          <a href="./pt/"           onclick="localStorage.setItem('pref-lang','pt')"><span>рџ‡§рџ‡·</span> PortuguГЄ...
+          <a href="./zh/"           onclick="localStorage.setItem('pref-lang','zh')"><span>рџ‡Ёрџ‡і</span> з®ЂдЅ“дё­...
+       HERO РЎР•РљР¦РРЇ                                                                                               
+        <!-- Р‘РµР№РґР¶ СЃС‚Р°С‚СѓСЃР° -->                                                                             
+          Р’ РїСЂРѕС†РµСЃСЃРµ СЃРѕР·РёРґР°РЅРёСЏ                                                                       
+        <!-- Р“Р»Р°РІРЅС‹Р№ Р·Р°РіРѕР»РѕРІРѕРє -->                                                                     
+          Р’Р°Р№Р±РєРѕРґРёРЅРі<br />Р±РµР· РіСЂР°РЅРёС†                                                                
+        <!-- Typewriter РїРѕРґР·Р°РіРѕР»РѕРІРѕРє -->                                                                   
+          <strong>ReCode</strong> вЂ” РЅРµР·Р°РІРёСЃРёРјС‹Р№ СЂР°Р·СЂР°Р±РѕС‚С‡РёРє.<br />                             
+          РЎРїРµС†РёР°Р»РёР·РёСЂСѓСЋСЃСЊ РЅР° СЃРѕР·РґР°РЅРёРё Рё РїСѓР±Р»РёРєР°С†РёРё                                 
+        <!-- CTA РєРЅРѕРїРєРё -->                                                                                      
+            <i class="fa-solid fa-layer-group text-sm"></i> РСЃСЃР»РµРґРѕРІР°С‚СЊ MindHug                             
+            <i class="fa-solid fa-fire text-sm"></i> РњРѕР№ РІР°Р№Р±                                                   
+        <!-- РЎС‚РµРє РїРёР»СЋР»Рё -->                                                                                 
+        <div class="flex flex-wrap gap-2 justify-center mt-10 reveal reveal-delay-4" aria-label="РСЃРїРѕР»СЊР·СѓРµР...
+         Рћ РџРћР”РҐРћР”Р• (ABOUT)                                                                                     
+          <!-- РўРµРєСЃС‚РѕРІС‹Р№ Р±Р»РѕРє -->                                                                         
+            <p class="section-label reveal">Р¤РёР»РѕСЃРѕС„РёСЏ</p>                                                     
+              РљРѕРґ вЂ” СЌС‚Рѕ&nbsp;<span class="gradient-text">РёСЃРєСѓСЃСЃС‚РІРѕ</span>                             
+              Р’Р°Р№Р±РєРѕРґРёРЅРі вЂ” СЌС‚Рѕ РЅРµ РїСЂРѕСЃС‚Рѕ СЂР°Р·СЂР°Р±РѕС‚РєР°. Р­С‚Рѕ СЃРѕСЃС‚РѕСЏРЅРёРµ РїРѕ...
+              РџСѓР±Р»РёРєР°С†РёСЏ РїСЂРѕРґСѓРєС‚РѕРІ РЅР° РјРёСЂРѕРІС‹С… РїР»РѕС‰Р°РґРєР°С… РґР»СЏ РјРµРЅСЏ вЂ” СЌС...
+            <!-- РџРёР»СЋР»Рё С…Р°СЂР°РєС‚РµСЂРёСЃС‚РёРє -->                                                           
+                100% Р°РЅРѕРЅРёРјРЅРѕСЃС‚СЊ                                                                            
+                РќРѕР»СЊ СЃР±РѕСЂР° РґР°РЅРЅС‹С…                                                                       
+                РђРІС‚РѕРЅРѕРјРЅР°СЏ СЂР°Р±РѕС‚Р°                                                                      
+          <!-- Р”РµРєРѕСЂР°С‚РёРІРЅС‹Р№ Р±Р»РѕРє -->                                                                   
+                <!-- РњРёРЅРё СЃС‚Р°С‚ -->                                                                             
+                    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem; font-weight:500;">РџСЂ...
+                    <div style="font-size:0.8rem; color:var(--text-muted); margin-top:0.2rem; font-weight:500;">РўРІ...
+                <!-- РџСЂРёРЅС†РёРїС‹ -->                                                                              
+                    Р§РёСЃС‚Р°СЏ РјСѓР»СЊС‚РёРїР»Р°С‚С„РѕСЂРјРµРЅРЅР°СЏ Р°СЂС…РёС‚РµРєС‚СѓСЂР°                         
+                    Kotlin Multiplatform РєР°Рє РѕСЃРЅРѕРІР°                                                           
+                    РќР°С‚РёРІРЅС‹Р№ UX С‡РµСЂРµР· Compose Multiplatform                                               
+                    РџРѕР»РЅР°СЏ Р»РѕРєР°Р»СЊРЅРѕСЃС‚СЊ вЂ” РІР°С€Рё РґР°РЅРЅС‹Рµ РЅРёРєСѓРґР° РЅРµ СѓС…РѕРґСЏС‚       
+         РџР РћР•РљРўР« вЂ” BENTO GRID                                                                                 
+          <p class="section-label reveal">РџРѕСЂС‚С„РѕР»РёРѕ</p>                                                       
+            РџСЂРѕРµРєС‚С‹                                                                                             
+            РњРѕРё РїСЂРѕРµРєС‚С‹ вЂ” СЌС‚Рѕ Р±Р°Р»Р°РЅСЃ РјРµР¶РґСѓ РЅР°РґС‘Р¶РЅРѕР№ Р°СЂС…РёС‚РµРєС‚СѓСЂРѕР№ Рё Рї...
+          <!-- в… Р“Р›РђР’РќРђРЇ РљРђР РўРћР§РљРђ: MindHug -->                                                        
+          <article class="bento-card bento-main reveal" aria-label="РџСЂРѕРµРєС‚ MindHug">                             
+            <!-- РЁР°РїРєР° РєР°СЂС‚РѕС‡РєРё -->                                                                       
+              <div class="app-icon" role="img" aria-label="РРєРѕРЅРєР° РїСЂРёР»РѕР¶РµРЅРёСЏ MindHug">рџ§ </div>       
+                    <i class="fa-solid fa-star" style="font-size:0.6rem;"></i>&nbsp;Р¤Р»Р°РіРјР°РЅ                     
+                  РљРѕРјРїР»РµРєСЃРЅРѕРµ РєСЂРѕСЃСЃРїР»Р°С‚С„РѕСЂРјРµРЅРЅРѕРµ СЂРµС€РµРЅРёРµ РЅР° KMP                  
+            <!-- РћРїРёСЃР°РЅРёРµ -->                                                                                  
+              MindHug вЂ” СЌС‚Рѕ РїСЂРёР»РѕР¶РµРЅРёРµ РґР»СЏ РїРѕРґРґРµСЂР¶РєРё РјРµРЅС‚Р°Р»СЊРЅРѕРіРѕ Р·РґРѕСЂРѕРІС...
+            <!-- РЎС‚РµРє С‚РµС…РЅРѕР»РѕРіРёР№ -->                                                                     
+                РЎС‚РµРє С‚РµС…РЅРѕР»РѕРіРёР№                                                                          
+              <div class="flex flex-wrap gap-2" role="list" aria-label="РўРµС…РЅРѕР»РѕРіРёРё РїСЂРѕРµРєС‚Р° MindHug">  
+            <!-- РџР»Р°С€РєРё РїР»Р°С‚С„РѕСЂРј -->                                                                     
+          <!-- SIDE CARD 1: РђСЂС…РёС‚РµРєС‚СѓСЂР° -->                                                                 
+          <aside class="bento-card bento-side1 reveal reveal-delay-1" aria-label="РђСЂС…РёС‚РµРєС‚СѓСЂРЅС‹Р№ РїРѕРґС...
+            <h3 style="font-family:'Outfit',sans-serif; font-size:1.15rem; font-weight:700; color:#fff; margin-botto...
+              Clean Architecture + MVI. Р Р°Р·РґРµР»РµРЅРёРµ СЃР»РѕС‘РІ, С‚РµСЃС‚РёСЂСѓРµРјРѕСЃС‚СЊ, РјР°СЃС€С‚Р°Р±Р...
+          <!-- SIDE CARD 2: РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚СЊ -->                                                   
+          <aside class="bento-card bento-side2 reveal reveal-delay-2" aria-label="РљРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚...
+              РќСѓР»РµРІР°СЏ Р°РЅР°Р»РёС‚РёРєР°. Р’СЃРµ РґР°РЅРЅС‹Рµ С…СЂР°РЅСЏС‚СЃСЏ Р»РѕРєР°Р»СЊРЅРѕ. РќРёРєР°РєРё...
+         РљРћРќРўРђРљРў-РЎР•РљР¦РРЇ                                                                                   
+      <div class="max-w-2xl mx-auto text-center">                                                                      
+        <p class="section-label reveal">РџРёРЅРі.</p>                                                                  
+        <h2 id="contact-heading" class="section-title mb-6 reveal reveal-delay-1">                                     
+          РќР° СЃРІСЏР·Рё.                                                                                             
+        </h2>                                                                                                          
+        <p class="section-desc mx-auto mb-10 reveal reveal-delay-2">                                                   
+          РџРѕС‡С‚Р° РґР»СЏ РІР°С€РёС… РѕС‚Р·С‹РІРѕРІ, РІРѕРїСЂРѕСЃРѕРІ РїРѕ Р°СЂС…РёС‚РµРєС‚СѓСЂРµ MindHug РёР»Рё Р...
+        <!-- Email вЂ” primary action -->                                                                              
+        <div class="flex flex-wrap items-center gap-3 justify-center reveal reveal-delay-3">                           
+          <a href="mailto:appandgamesoft@gmail.com" class="btn-primary" id="contact-email-btn" aria-label="РќР°РїРёС...
+            <i class="fa-solid fa-envelope text-sm"></i> РќР°РїРёСЃР°С‚СЊ РїРёСЃСЊРјРѕ                                 
+          </a>                                                                                                         
+    <div class="max-w-6xl mx-auto px-5 py-12">                                                                         
+      <!-- РЎРѕС†РёР°Р»СЊРЅС‹Рµ РєРЅРѕРїРєРё + РґРѕРєСѓРјРµРЅС‚С‹ вЂ” С†РµРЅС‚СЂРёСЂРѕРІР°РЅС‹ -->                     
+      <div class="flex flex-col items-center gap-6">                                                                   
+        <div class="flex items-center gap-3" role="list" aria-label="РЎРѕС†РёР°Р»СЊРЅС‹Рµ СЃРµС‚Рё">                   
+          <a                                                                                                           
+            href="https://www.youtube.com/@appandgamesofchannel"                                                       
+            class="social-btn youtube"                                                                                 
+            role="listitem"                                                                                            
+            aria-label="РљР°РЅР°Р» РЅР° YouTube"                                                                       
+            title="YouTube"                                                                                            
+            id="footer-youtube"                                                                                        
+            target="_blank"                                                                                            
+            rel="noopener noreferrer"                                                                                  
+          >                                                                                                            
+            <i class="fa-brands fa-youtube"></i>                                                                       
+          </a>                                                                                                         
+          <a                                                                                                           
+            href="https://www.tiktok.com/@appandgamesoft?lang=en"                                                      
+            class="social-btn tiktok"                                                                                  
+            role="listitem"                                                                                            
+            aria-label="РџСЂРѕС„РёР»СЊ РІ TikTok"                                                                      
+            title="TikTok"                                                                                             
+            id="footer-tiktok"                                                                                         
+            target="_blank"                                                                                            
+            rel="noopener noreferrer"                                                                                  
+          >                                                                                                            
+            <i class="fa-brands fa-tiktok"></i>                                                                        
+          </a>                                                                                                         
+        <!-- Р”РѕРєСѓРјРµРЅС‚С‹ -->                                                                                    
+        <div class="flex items-center gap-4 flex-wrap justify-center">                                                 
+          <button                                                                                                      
+            class="footer-link"                                                                                        
+            id="open-privacy-btn"                                                                                      
+            onclick="openModal('modal-privacy')"                                                                       
+            aria-haspopup="dialog"                                                                                     
+            aria-controls="modal-privacy"                                                                              
+          >                                                                                                            
+            РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё                                                      
+          <span style="color:var(--border);">В·</span>                                                                 
+          <button                                                                                                      
+            class="footer-link"                                                                                        
+            id="open-tos-btn"                                                                                          
+            onclick="openModal('modal-tos')"                                                                           
+            aria-haspopup="dialog"                                                                                     
+            aria-controls="modal-tos"                                                                                  
+          >                                                                                                            
+            РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ                                                                  
+      <div class="divider my-8"></div>                                                                                 
+      <!-- РЎР»РѕРіР°РЅ + РєРѕРїРёСЂР°Р№С‚ -->                                                                         
+      <p style="text-align:center; font-size:0.8rem; color:var(--text-muted); margin-bottom:0.5rem; font-style:itali...
+        Р’Р°Р№Р±РєРѕРґРёРЅРі Р±РµР· РєРѕРјРїСЂРѕРјРёСЃСЃРѕРІ                                                           
+      </p>                                                                                                             
+      <p style="text-align:center; font-size:0.75rem; color:var(--text-muted); opacity:0.6;">                          
+        В© 2026 ReCode. Р Р°Р·СЂР°Р±РѕС‚Р°РЅРѕ СЂР°РґРё С‚РІРѕСЂС‡РµСЃС‚РІР°.                                          
+      </p>                                                                                                             
+       РњРћР”РђР›: РџРћР›РРўРРљРђ РљРћРќР¤РР”Р•РќР¦РРђР›Р¬РќРћРЎРўР                                               
+  <div                                                                                                                 
+    id="modal-privacy"                                                                                                 
+    class="modal-overlay"                                                                                              
+    role="dialog"                                                                                                      
+    aria-modal="true"                                                                                                  
+    aria-labelledby="privacy-title"                                                                                    
+    tabindex="-1"                                                                                                      
+  >                                                                                                                    
+    <div class="modal-box">                                                                                            
+      <div class="flex items-center justify-between mb-6">                                                             
+        <h2 id="privacy-title" class="modal-h1">                                                                       
+          <i class="fa-solid fa-shield-halved mr-2" style="color:#a78bfa;"></i>                                        
+          РџРѕР»РёС‚РёРєР° РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё                                                        
+        </h2>                                                                                                          
+        <button                                                                                                        
+          class="modal-close"                                                                                          
+          onclick="closeModal('modal-privacy')"                                                                        
+          aria-label="Р—Р°РєСЂС‹С‚СЊ РїРѕР»РёС‚РёРєСѓ РєРѕРЅС„РёРґРµРЅС†РёР°Р»СЊРЅРѕСЃС‚Рё"                            
+          id="close-privacy-btn"                                                                                       
+        >                                                                                                              
+          <i class="fa-solid fa-xmark"></i>                                                                            
+        </button>                                                                                                      
+  </div>                                                                                                               
+       РњРћР”РђР›: РЈРЎР›РћР’РРЇ РРЎРџРћР›Р¬Р—РћР’РђРќРРЇ                                                           
+  <div                                                                                                                 
+    id="modal-tos"                                                                                                     
+    class="modal-overlay"                                                                                              
+    role="dialog"                                                                                                      
+    aria-modal="true"                                                                                                  
+    aria-labelledby="tos-title"                                                                                        
+    tabindex="-1"                                                                                                      
+  >                                                                                                                    
+    <div class="modal-box">                                                                                            
+      <div class="flex items-center justify-between mb-6">                                                             
+        <h2 id="tos-title" class="modal-h1">                                                                           
+          <i class="fa-solid fa-file-contract mr-2" style="color:#a78bfa;"></i>                                        
+          РЈСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ                                                                    
+        </h2>                                                                                                          
+        <button                                                                                                        
+          class="modal-close"                                                                                          
+          onclick="closeModal('modal-tos')"                                                                            
+          aria-label="Р—Р°РєСЂС‹С‚СЊ СѓСЃР»РѕРІРёСЏ РёСЃРїРѕР»СЊР·РѕРІР°РЅРёСЏ"                                        
+          id="close-tos-btn"                                                                                           
+        >                                                                                                              
+          <i class="fa-solid fa-xmark"></i>                                                                            
+        </button>                                                                                                      
+  </div>                                                                                                               
+  <script>                                                                                                             
+       1. РўРЃРњРќРђРЇ РўР•РњРђ вЂ” РїСЂРёРЅСѓРґРёС‚РµР»СЊРЅРѕ РІРєР»СЋС‡РµРЅР°                                        
+       2. TYPEWRITER Р­Р¤Р¤Р•РљРў                                                                                      
+        'РїСЂРѕРґСѓРєС‚РѕРІ РґР»СЏ РјРёСЂРѕРІС‹С… РјРѕР±РёР»СЊРЅС‹С… РїР»РѕС‰Р°РґРѕРє.',                               
+        'Р°СЂС…РёС‚РµРєС‚СѓСЂРЅС‹С… СЂРµС€РµРЅРёР№ РЅР° KMP.',                                                         
+        'РЅР°С‚РёРІРЅРѕРіРѕ РјРѕР±РёР»СЊРЅРѕРіРѕ РѕРїС‹С‚Р°.',                                                         
+       4. РЎР›Р•Р”РЇР©РР™ РЎР’Р•Рў (Bento cards mouse tracking)                                                       
+       7. РњРћР”РђР›Р¬РќР«Р• РћРљРќРђ                                                                                  
+      // Р¤РѕРєСѓСЃ РґР»СЏ РґРѕСЃС‚СѓРїРЅРѕСЃС‚Рё                                                                      
+    // Р—Р°РєСЂС‹С‚РёРµ РїРѕ РєР»РёРєСѓ РЅР° С„РѕРЅ                                                                    
+    // Р—Р°РєСЂС‹С‚РёРµ РїРѕ Escape                                                                                    
+                                                                                                                       
+       8. SMOOTH SCROLL РґР»СЏ Р±СЂР°СѓР·РµСЂРѕРІ Р±РµР· РїРѕРґРґРµСЂР¶РєРё                                            
+                                                                                                                       
+                                                                                                                       
+      }                                                                                                                
+                                                                                                                       
+                                                                                                                       
+                                                                                                                       
+    })();                                                                                                              
+  </script>                                                                                                            
+                                                                                                                       
+
+
