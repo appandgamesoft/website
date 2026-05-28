@@ -720,6 +720,99 @@
     ::-webkit-scrollbar { width: 6px; }
     ::-webkit-scrollbar-track { background: var(--bg); }
     ::-webkit-scrollbar-thumb { background: rgba(139,92,246,0.35); border-radius: 4px; }
+
+    /* ══════════════════════════════════════════════
+       LANGUAGE DROPDOWN
+    ══════════════════════════════════════════════ */
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      padding: 0.3rem 0.65rem;
+      border-radius: 8px;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: #a3e635;
+      background: rgba(163,230,53,0.08);
+      border: 1px solid rgba(163,230,53,0.22);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s, box-shadow 0.2s;
+      letter-spacing: 0.04em;
+      white-space: nowrap;
+      position: relative;
+    }
+    .lang-btn:hover {
+      background: rgba(163,230,53,0.15);
+      border-color: rgba(163,230,53,0.4);
+      box-shadow: 0 0 14px rgba(163,230,53,0.2);
+    }
+    .lang-btn .lang-chevron {
+      transition: transform 0.25s ease;
+      font-size: 0.6rem;
+      color: rgba(163,230,53,0.7);
+    }
+    .lang-btn.open .lang-chevron { transform: rotate(180deg); }
+
+    .lang-dropdown {
+      position: absolute;
+      right: 0;
+      top: calc(100% + 8px);
+      min-width: 150px;
+      background: var(--bg-card);
+      border: 1px solid rgba(139,92,246,0.25);
+      border-radius: 14px;
+      padding: 0.45rem;
+      box-shadow: 0 0 30px rgba(139,92,246,0.3), 0 8px 32px rgba(0,0,0,0.5);
+      z-index: 300;
+      opacity: 0;
+      transform: translateY(-6px) scale(0.97);
+      pointer-events: none;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+    .lang-dropdown.open {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+      pointer-events: all;
+    }
+    .lang-dropdown a {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: background 0.15s, color 0.15s;
+      white-space: nowrap;
+    }
+    .lang-dropdown a:hover { background: rgba(139,92,246,0.12); color: #fff; }
+    .lang-dropdown a.active { color: #a3e635; font-weight: 700; }
+    .lang-dropdown a .lang-flag { font-size: 1rem; line-height: 1; }
+
+    /* Mobile language grid */
+    .mobile-lang-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.4rem;
+      padding: 0.75rem 1rem 1rem;
+      border-top: 1px solid var(--glass-border);
+    }
+    .mobile-lang-grid a {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.5rem 0.75rem;
+      border-radius: 10px;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      text-decoration: none;
+      background: rgba(139,92,246,0.06);
+      border: 1px solid rgba(139,92,246,0.12);
+      transition: background 0.15s, color 0.15s, border-color 0.15s;
+    }
+    .mobile-lang-grid a:hover { background: rgba(139,92,246,0.15); color: #fff; border-color: rgba(139,92,246,0.3); }
+    .mobile-lang-grid a.active { color: #a3e635; border-color: rgba(163,230,53,0.3); background: rgba(163,230,53,0.06); font-weight: 700; }
   </style>
 </head>
 
@@ -749,10 +842,23 @@
           <a href="#projects" class="nav-link" id="nav-projects">Projects</a>
           <a href="#contact"  class="nav-link" id="nav-contact">Contact</a>
           <span class="text-[rgba(255,255,255,0.15)] text-xs cursor-default">|</span>
-          <div class="flex items-center gap-1.5 text-xs">
-            <a href="../index.html" onclick="localStorage.setItem('pref-lang', 'ru')" class="nav-link hover:text-white transition-colors" id="lang-switch-ru">RU</a>
-            <span class="text-[rgba(255,255,255,0.15)]">/</span>
-            <span class="text-lime-400 font-bold cursor-default">EN</span>
+          <!-- Language Dropdown -->
+          <div style="position:relative;" id="lang-menu-wrap">
+            <button class="lang-btn" id="lang-menu-btn" aria-haspopup="listbox" aria-expanded="false" aria-label="Language selection">
+              🇬🇧 EN <i class="fa-solid fa-chevron-down lang-chevron"></i>
+            </button>
+            <div class="lang-dropdown" id="lang-dropdown" role="listbox" aria-label="Language selection">
+              <a href="../en/index.html" onclick="localStorage.setItem('pref-lang','en')" class="active" role="option"><span class="lang-flag">🇬🇧</span> English</a>
+              <a href="../"              onclick="localStorage.setItem('pref-lang','ru')" role="option"><span class="lang-flag">🇷🇺</span> Русский</a>
+              <a href="../de/"           onclick="localStorage.setItem('pref-lang','de')" role="option"><span class="lang-flag">🇩🇪</span> Deutsch</a>
+              <a href="../es/"           onclick="localStorage.setItem('pref-lang','es')" role="option"><span class="lang-flag">🇪🇸</span> Español</a>
+              <a href="../fr/"           onclick="localStorage.setItem('pref-lang','fr')" role="option"><span class="lang-flag">🇫🇷</span> Français</a>
+              <a href="../hi/"           onclick="localStorage.setItem('pref-lang','hi')" role="option"><span class="lang-flag">🇮🇳</span> हिन्दी</a>
+              <a href="../ja/"           onclick="localStorage.setItem('pref-lang','ja')" role="option"><span class="lang-flag">🇯🇵</span> 日本語</a>
+              <a href="../ko/"           onclick="localStorage.setItem('pref-lang','ko')" role="option"><span class="lang-flag">🇰🇷</span> 한국어</a>
+              <a href="../pt/"           onclick="localStorage.setItem('pref-lang','pt')" role="option"><span class="lang-flag">🇧🇷</span> Português</a>
+              <a href="../zh/"           onclick="localStorage.setItem('pref-lang','zh')" role="option"><span class="lang-flag">🇨🇳</span> 简体中文</a>
+            </div>
           </div>
         </div>
 
@@ -778,11 +884,19 @@
         <a href="#about"    onclick="closeMobileMenu()">Manifest</a>
         <a href="#projects" onclick="closeMobileMenu()">Projects</a>
         <a href="#contact"  onclick="closeMobileMenu()">Contact</a>
-        <div class="px-6 py-3 flex items-center gap-1.5 border-t border-border/10 text-xs">
-          <a href="../index.html" onclick="localStorage.setItem('pref-lang', 'ru')" class="text-gray-400 hover:text-white">RU</a>
-          <span class="text-[rgba(255,255,255,0.15)]">/</span>
-          <span class="text-lime-400 font-bold">EN</span>
-        </div>
+        <!-- Mobile language grid -->
+        <nav class="mobile-lang-grid" aria-label="Language selection">
+          <a href="../en/index.html" onclick="localStorage.setItem('pref-lang','en')" class="active"><span>🇬🇧</span> English</a>
+          <a href="../"              onclick="localStorage.setItem('pref-lang','ru')"><span>🇷🇺</span> Русский</a>
+          <a href="../de/"           onclick="localStorage.setItem('pref-lang','de')"><span>🇩🇪</span> Deutsch</a>
+          <a href="../es/"           onclick="localStorage.setItem('pref-lang','es')"><span>🇪🇸</span> Español</a>
+          <a href="../fr/"           onclick="localStorage.setItem('pref-lang','fr')"><span>🇫🇷</span> Français</a>
+          <a href="../hi/"           onclick="localStorage.setItem('pref-lang','hi')"><span>🇮🇳</span> हिन्दी</a>
+          <a href="../ja/"           onclick="localStorage.setItem('pref-lang','ja')"><span>🇯🇵</span> 日本語</a>
+          <a href="../ko/"           onclick="localStorage.setItem('pref-lang','ko')"><span>🇰🇷</span> 한국어</a>
+          <a href="../pt/"           onclick="localStorage.setItem('pref-lang','pt')"><span>🇧🇷</span> Português</a>
+          <a href="../zh/"           onclick="localStorage.setItem('pref-lang','zh')"><span>🇨🇳</span> 简体中文</a>
+        </nav>
       </div>
     </nav>
   </header>
@@ -1342,6 +1456,41 @@
         }
       });
     });
+
+    /* ──────────────────────────────────────────────
+       9. LANG DROPDOWN
+    ────────────────────────────────────────────── */
+    (function () {
+      const btn      = document.getElementById('lang-menu-btn');
+      const dropdown = document.getElementById('lang-dropdown');
+      if (!btn || !dropdown) return;
+
+      function openLang() {
+        btn.classList.add('open');
+        dropdown.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+      }
+      function closeLang() {
+        btn.classList.remove('open');
+        dropdown.classList.remove('open');
+        btn.setAttribute('aria-expanded', 'false');
+      }
+
+      btn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdown.classList.contains('open') ? closeLang() : openLang();
+      });
+
+      // Close on outside click
+      document.addEventListener('click', (e) => {
+        if (!btn.contains(e.target) && !dropdown.contains(e.target)) closeLang();
+      });
+
+      // Close on Escape
+      document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') closeLang();
+      });
+    })();
   </script>
 
 </body>
