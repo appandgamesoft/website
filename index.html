@@ -739,21 +739,19 @@
   ════════════════════════════════════════════ -->
   <header id="navbar" role="banner">
     <nav aria-label="Основная навигация">
-      <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between">
+      <div class="max-w-6xl mx-auto px-5 h-16 flex items-center justify-between md:grid md:grid-cols-3 md:items-center">
         <!-- Логотип -->
-        <div class="flex items-center justify-start md:flex-1">
-          <a href="#hero" class="nav-logo" aria-label="ReCode — на главную">ReCode</a>
-        </div>
+        <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode — на главную">ReCode</a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex items-center justify-center gap-8">
+        <div class="hidden md:flex justify-center items-center gap-8 md:justify-self-center">
           <a href="#about"    class="nav-link" id="nav-about">Манифест</a>
           <a href="#projects" class="nav-link" id="nav-projects">Проекты</a>
           <a href="#contact"  class="nav-link" id="nav-contact">Связь</a>
         </div>
 
         <!-- CTA + Hamburger / Spacer -->
-        <div class="flex items-center justify-end gap-3 md:flex-1">
+        <div class="flex items-center justify-end md:justify-self-end">
           <!-- Hamburger -->
           <button
             id="hamburger-btn"
@@ -765,7 +763,7 @@
             <span></span><span></span><span></span>
           </button>
           <!-- Spacer on desktop -->
-          <div class="hidden md:block" aria-hidden="true"></div>
+          <div class="hidden md:block md:justify-self-end w-[85px]" aria-hidden="true"></div>
         </div>
       </div>
 
