@@ -137,7 +137,7 @@
       color: var(--text);
       overflow-x: hidden;
       min-height: 100vh;
-      word-break: break-word;
+      word-break: break-all;
       overflow-wrap: anywhere;
       line-break: strict;
     }
@@ -430,9 +430,10 @@
       overflow: hidden;
       transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       cursor: default;
-      word-break: break-all; /* Critical fix for Japanese text overflow */
-      overflow-wrap: break-word; /* Ensure long katakana strings break */
-      white-space: normal; /* Force text to wrap */
+      word-break: break-all;
+      overflow-wrap: break-word;
+      white-space: normal;
+      min-width: 0; /* CRITICAL: Prevents CSS Grid min-content blowout */
     }
     .bento-card::before {
       /* Следящий свет */
@@ -843,7 +844,7 @@
         <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode — ホームページ">ReCode</a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex justify-center items-center gap-8 md:justify-self-center">
+        <div class="hidden md:flex justify-center items-center gap-4 lg:gap-8 md:justify-self-center">
           <a href="#about"    class="nav-link whitespace-nowrap" id="nav-about">マニフェスト</a>
           <a href="#projects" class="nav-link whitespace-nowrap" id="nav-projects">プロジェクト</a>
           <a href="#contact"  class="nav-link whitespace-nowrap" id="nav-contact">コンタクト</a>
