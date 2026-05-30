@@ -137,6 +137,8 @@
       color: var(--text);
       overflow-x: hidden;
       min-height: 100vh;
+      word-break: normal;
+      line-break: strict;
     }
 
     /* ══════════════════════════════════════════════
@@ -838,9 +840,9 @@
 
         <!-- Desktop nav links -->
         <div class="hidden md:flex justify-center items-center gap-8 md:justify-self-center">
-          <a href="#about"    class="nav-link" id="nav-about">マニフェスト</a>
-          <a href="#projects" class="nav-link" id="nav-projects">プロジェクト</a>
-          <a href="#contact"  class="nav-link" id="nav-contact">コンタクト</a>
+          <a href="#about"    class="nav-link whitespace-nowrap" id="nav-about">マニフェスト</a>
+          <a href="#projects" class="nav-link whitespace-nowrap" id="nav-projects">プロジェクト</a>
+          <a href="#contact"  class="nav-link whitespace-nowrap" id="nav-contact">コンタクト</a>
           <span class="text-[rgba(255,255,255,0.15)] text-xs cursor-default">|</span>
           <!-- Language Dropdown -->
           <div style="position:relative;" id="lang-menu-wrap">
@@ -881,9 +883,9 @@
 
       <!-- Mobile menu -->
       <div id="mobile-menu" role="navigation" aria-label="モバイルメニュー">
-        <a href="#about"    onclick="closeMobileMenu()">マニフェスト</a>
-        <a href="#projects" onclick="closeMobileMenu()">プロジェクト</a>
-        <a href="#contact"  onclick="closeMobileMenu()">コンタクト</a>
+        <a href="#about"    class="whitespace-nowrap" onclick="closeMobileMenu()">マニフェスト</a>
+        <a href="#projects" class="whitespace-nowrap" onclick="closeMobileMenu()">プロジェクト</a>
+        <a href="#contact"  class="whitespace-nowrap" onclick="closeMobileMenu()">コンタクト</a>
         <!-- Mobile language grid -->
         <nav class="mobile-lang-grid" aria-label="言語選択">
           <a href="../en/index.html" onclick="localStorage.setItem('pref-lang','en')"><span>🇬🇧</span> English</a>
@@ -915,8 +917,8 @@
         </div>
 
         <!-- Main Title -->
-        <h1 id="hero-heading" class="hero-title reveal reveal-delay-1" style="line-height: 1.25; word-break: keep-all;">
-          バイブコーディング<br />無限大
+        <h1 id="hero-heading" class="hero-title reveal reveal-delay-1" style="line-height: 1.25;">
+          バイブコーディング<wbr>無限大
         </h1>
 
         <!-- Typewriter Subtitle -->
