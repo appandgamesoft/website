@@ -430,6 +430,9 @@
       overflow: hidden;
       transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       cursor: default;
+      word-break: break-all; /* Critical fix for Japanese text overflow */
+      overflow-wrap: break-word; /* Ensure long katakana strings break */
+      white-space: normal; /* Force text to wrap */
     }
     .bento-card::before {
       /* Следящий свет */
