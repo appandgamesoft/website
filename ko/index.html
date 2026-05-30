@@ -137,6 +137,7 @@
       color: var(--text);
       overflow-x: hidden;
       min-height: 100vh;
+      word-break: keep-all;
     }
 
     /* ══════════════════════════════════════════════
@@ -837,10 +838,10 @@
         <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode — 홈페이지">ReCode</a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex justify-center items-center gap-8 md:justify-self-center">
-          <a href="#about"    class="nav-link" id="nav-about">매니페스트</a>
-          <a href="#projects" class="nav-link" id="nav-projects">프로젝트</a>
-          <a href="#contact"  class="nav-link" id="nav-contact">연락처</a>
+        <div class="hidden md:flex justify-center items-center gap-4 lg:gap-8 md:justify-self-center">
+          <a href="#about"    class="nav-link whitespace-nowrap" id="nav-about">매니페스트</a>
+          <a href="#projects" class="nav-link whitespace-nowrap" id="nav-projects">프로젝트</a>
+          <a href="#contact"  class="nav-link whitespace-nowrap" id="nav-contact">연락처</a>
           <span class="text-[rgba(255,255,255,0.15)] text-xs cursor-default">|</span>
           <!-- Language Dropdown -->
           <div style="position:relative;" id="lang-menu-wrap">
