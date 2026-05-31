@@ -28,12 +28,7 @@
   <script src="https://cdn.tailwindcss.com"></script>
 
   <!-- FontAwesome via cdnjs -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    crossorigin="anonymous"
-    referrerpolicy="no-referrer"
-  />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
   <script>
     /* ──────────────────────────────────────────────
@@ -1160,9 +1155,9 @@
         </p>
         <!-- Email — primary action -->
         <div class="flex flex-wrap items-center gap-3 justify-center reveal reveal-delay-3">
-          <a href="mailto:appandgamesoft@gmail.com" class="btn-primary" id="contact-email-btn" aria-label="ReCode開発者にメールを送る">
+          <button class="btn-primary" id="contact-email-btn" aria-label="ReCode開発者にメールを送る">
             <i class="fa-solid fa-envelope text-sm"></i> メールを送る
-          </a>
+          </button>
         </div>
       </div>
     </section>
@@ -1494,6 +1489,15 @@
         if (e.key === 'Escape') closeLang();
       });
     })();
+    /* ──────────────────────────────────────────────
+       10. ANTI-SPAM EMAIL OBFUSCATION
+    ────────────────────────────────────────────── */
+    document.getElementById('contact-email-btn')?.addEventListener('click', function(e) {
+      e.preventDefault();
+      const user = 'appandgamesoft';
+      const domain = 'gmail.com';
+      window.location.href = 'mailto:' + user + '@' + domain;
+    });
   </script>
 
 </body>
