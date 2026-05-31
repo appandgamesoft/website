@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja" class="scroll-smooth">
 <head>
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-inline' 'unsafe-eval' data: blob: https://cdn.tailwindcss.com https://cdnjs.cloudflare.com https://fonts.googleapis.com https://fonts.gstatic.com https://cdn.jsdelivr.net https://developer.mozilla.org https://github.com https://*.googletagmanager.com https://*.google-analytics.com https://analytics.google.com https://pagead2.googlesyndication.com https://adservice.google.com https://googleads.g.doubleclick.net https://tpc.googlesyndication.com https://www.google.com;" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <meta name="description" content="ReCode — independent mobile app developer. Specializes in vibecoding: creating high-quality applications for App Store and Google Play." />
@@ -137,7 +138,7 @@
       color: var(--text);
       overflow-x: hidden;
       min-height: 100vh;
-      word-break: break-all;
+      word-break: break-word;
       overflow-wrap: anywhere;
       line-break: strict;
     }
@@ -430,10 +431,6 @@
       overflow: hidden;
       transition: border-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
       cursor: default;
-      word-break: break-all;
-      overflow-wrap: break-word;
-      white-space: normal;
-      min-width: 0; /* CRITICAL: Prevents CSS Grid min-content blowout */
     }
     .bento-card::before {
       /* Следящий свет */
@@ -844,7 +841,7 @@
         <a href="#hero" class="nav-logo md:justify-self-start" aria-label="ReCode — ホームページ">ReCode</a>
 
         <!-- Desktop nav links -->
-        <div class="hidden md:flex justify-center items-center gap-4 lg:gap-8 md:justify-self-center">
+        <div class="hidden md:flex justify-center items-center gap-8 md:justify-self-center">
           <a href="#about"    class="nav-link whitespace-nowrap" id="nav-about">マニフェスト</a>
           <a href="#projects" class="nav-link whitespace-nowrap" id="nav-projects">プロジェクト</a>
           <a href="#contact"  class="nav-link whitespace-nowrap" id="nav-contact">コンタクト</a>
